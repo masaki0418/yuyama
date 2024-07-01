@@ -1,0 +1,102 @@
+/* global box-sizing */
+*,
+*:after,
+*:before {
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	-webkit-font-smoothing:antialiased;
+	font-smoothing:antialiased;
+	text-rendering:optimizeLegibility;
+}
+a, abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block
+}
+html{
+	line-height: 1;
+	font-size: $size-text-root-middle;
+	font-family: $gothic;
+	line-break: strict;
+	overflow-wrap: break-word;
+	@include mediaquery-md {
+		font-size: $size-text-root-narrow;
+	}
+	@include mediaquery-xl {
+		font-size: $size-text-root-wide;
+	}
+}
+body {
+	color: $color-black;
+	position: relative;
+	letter-spacing: .5 * $vp;
+	font-weight: 400;
+	font-style: normal;
+	background: $color-lightgray;
+	@include mediaquery-md {
+		width: 100%;
+		min-width: initial;
+		min-width: auto;
+	}
+	&.fixed{
+		height: 100%;
+		overflow: hidden;
+	}
+}
+ol, ul {
+	list-style: none
+}
+blockquote, q {
+	quotes: none
+}
+blockquote:after, blockquote:before, q:after, q:before {
+	content: "";
+	content: none
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0
+}
+table td {
+	border: none
+}
+a {
+	color: #000;
+	text-decoration: none;
+	transition: .3s
+}
+a:hover {
+	text-decoration: underline
+}
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: bottom
+}
+a img:hover{
+	opacity: 0.7;
+	transition: .3s
+}
+strong{
+	font-weight: bold;
+}
+p{
+	line-height: 1.8;
+}
+.pc_br{
+	@include mediaquery-md {
+		display: none;
+	}
+}
+.sp_br{
+	display: none;
+	@include mediaquery-md {
+		display: block;
+	}
+}

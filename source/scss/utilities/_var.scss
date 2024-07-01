@@ -1,0 +1,113 @@
+// ----------------------------------------
+// breakpoint
+// ----------------------------------------
+
+$num-breakpoint-sm: 320; // 320px
+$num-breakpoint-md: 640; // 640px
+$num-breakpoint-lg: 960; // 960px
+$num-breakpoint-xl: 1312; // 1280px
+
+$breakpoint-sm: #{$num-breakpoint-sm}px; // 320px
+$breakpoint-md: #{$num-breakpoint-md}px; // 640px
+$breakpoint-lg: #{$num-breakpoint-lg}px; // 960px
+$breakpoint-xl: #{$num-breakpoint-xl}px; // 1280px;
+
+// ----------------------------------------
+// base
+// ----------------------------------------
+
+$gothic:'Noto Sans JP', -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+$mincho:"游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+$marugo:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+
+// ----------------------------------------
+// num
+// ----------------------------------------
+
+// 狭い画面でのテキストサイズとビューポートとレイアウト要素のパディング算出数（vw）
+$num-text-size: 4.268; // 狭い画面でのテキストサイズの算出数 4 ( => 4vw)
+$num-viewport-padding: 0; // 狭い画面でのビューポートのパディングの算出数 0 ( => 0)
+$num-layout-padding: 4.268; // 狭い画面でのレイアウト要素のパディングの算出数 4 ( => 4vw)
+
+// 広い画面でのテキストサイズ（px）
+$num-text-root-wide: 16; // 基本フォントサイズの算出数 16
+
+// 相対サイズ
+$num-text-small: 0.875;
+$num-text-smaller: 0.75; // 相対的小フォントサイズの比率 0.75 => 0.75em
+$num-text-smallest: 0.625;
+$num-text-large: 1.125;
+$num-text-larger: 1.25; // 相対的大フォントサイズの比率 1.25 => 1.25em
+$num-text-largest: 1.375;
+$num-text-ultralarge: 1.5;
+$num-text-extralarge: 1.75;
+$num-text-superlarge: 2;
+
+// 行高
+$num-line-root: 1.5; // 通常の行高数の基準 1.5
+$num-line-narrow: 1.3; // 細いテキストの行高数 1.2
+$num-line-wide: 1.7; // 太いテキストの行高数 1.2
+$num-line-wider: 2; // 太いテキストの行高数 1.2
+$num-line-one: 1; // 一行テキストの行高数 1 => 1rem
+$num-contents-gap: 1.5; // コンテンツ同士の距離の倍率の数 1.5
+
+// テキストの文字サイズ（文字数換算）
+$num-heading-document-number: 15.7; // ページ（サイト）タイトルの文字数
+$num-heading-part-number: 19.17; // 部タイトル相当の文字数
+$num-heading-chapter-number: 23.4375; // 章タイトル相当の文字数
+$num-heading-section-number: 16; // 大節タイトル相当の文字数
+$num-heading-subsection-number: 18; // 中節タイトル相当の文字数
+$num-heading-subsubsection-number: 20; // 小節タイトル相当の文字数
+$num-text-number: 23;
+
+// 定数の算出
+$num-line-title: $num-line-narrow; // タイトルテキストの行高数 1.2 => 1.2rem
+$num-line-text: $num-line-root; // 通常テキストの行高数 1.5 => 1.5rem
+$num-viewport-layout-padding: $num-viewport-padding + $num-layout-padding; // 狭い画面でのパディングの算出数 4 + 0 = 4 (=> 4vw)
+$num-viewport-layout-paddings: $num-viewport-layout-padding * 2; // 狭い画面でのパディングの算出数の合計 4 * 2 = 8 (=> 8vw)
+$num-layout-width: 100 - $num-viewport-layout-paddings; // 狭い画面でのコンテンツ描画幅の算出数 100 - 8 = 92 (=> 92vw)
+$num-text-per-padding: $num-viewport-layout-padding / $num-text-size; // テキストサイズ毎パディング幅 4 / 4 = 1 (=> 1rem)
+$num-text-per-paddings: $num-viewport-layout-paddings / $num-text-size; // テキストサイズ毎合計パディング幅 8 / 4 = 2 (=> 2rem)
+$num-text-per-viewport-layout: 100 / $num-text-size; // テキストサイズ毎ビューポート幅 100 / 4 = 25 (=> 25rem)
+$num-text-per-layout: $num-text-per-viewport-layout - $num-text-per-paddings; // 基本テキスト相当の文字数 25 - 2 = 23 (=> 23rem)
+
+// ----------------------------------------
+// size
+// ----------------------------------------
+
+// pxの代替
+$vp: 1rem / $num-text-root-wide;
+
+// 描画幅とパディングのサイズ
+$size-layout-basis: $num-text-per-layout * 1rem; // 狭い画面でのフォントサイズの基準 92 / 4 * 1rem = 23rem
+$size-layout-padding: $num-text-per-padding * 1rem; // 狭い画面でのレイアウト要素のパディング 1rem
+
+// htmlに指定するテキストのサイズ
+$size-text-root-narrow: $num-text-size * 1vw; // 4vw
+$size-text-root-middle: 100vw / 1312 * $num-text-root-wide; // 4vw
+$size-text-root-wide: $num-text-root-wide * 1px; // 16px
+$size-text-small: 16 * $vp * $num-text-small;
+$size-text-smaller: 16 * $vp * $num-text-smaller; // 相対的小フォントサイズの比率 0.75 => 0.75em
+$size-text-smallest: 16 * $vp * $num-text-smallest;
+$size-text-large: 16 * $vp * $num-text-large;
+$size-text-larger: 16 * $vp * $num-text-larger; // 相対的大フォントサイズの比率 1.25 => 1.25em
+$size-text-largest: 16 * $vp * $num-text-largest;
+$size-text-ultralarge: 16 * $vp * $num-text-ultralarge;
+$size-text-extralarge: 16 * $vp * $num-text-extralarge;
+$size-text-superlarge: 16 * $vp * $num-text-superlarge;
+
+// bodyに指定する基準テキストサイズ = 基準描画幅 / 描画幅内文字数
+$size-text-main: $size-layout-basis / $num-text-per-layout; // = 1rem
+
+// ----------------------------------------
+// color
+// ----------------------------------------
+
+$color-black: #000;
+$color-lightgray: #efefef;
+$color-gray: #aaa;
+$color-darkgray: #555;
+$color-red: #bb272d;
+$color-blue: #0071b6;
+$color-green: #008c45;
+$color-orange: #eb5a24;

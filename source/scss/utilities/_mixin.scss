@@ -1,0 +1,23 @@
+@mixin mediaquery-sm {
+  @media (max-width: $breakpoint-sm) {
+    @content;
+  }
+}
+
+@mixin mediaquery-md {
+  @media (max-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin mediaquery-lg {
+  @media (min-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+@mixin mediaquery-xl {
+  @media (min-width: $breakpoint-xl) {
+    @content;
+  }
+}
