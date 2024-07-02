@@ -1,0 +1,142 @@
+.commonHeader{
+	width: 100%;
+	height: 80 * $vp;
+	background: #FFF;
+	position: sticky;
+	top: 0;
+	display: flex;
+	align-items: center;
+	z-index:100;
+	.commonHeader__inner{
+		width: 100%;
+		padding: 0 3%;
+		display: flex;
+		align-items: center;
+	}
+	.header-ttl{
+		width: 150 * $vp;
+	}
+}
+.global{
+	margin: 0 0 0 auto;
+	display: flex;
+	align-items: center;
+	font-weight: 700;
+	ul{
+		display: flex;
+		align-items: center;
+	}
+	.globalNav{
+		display: flex;
+		align-items: center;
+		@include mediaquery-lg {
+			display: none;
+		}
+		.nav-content{
+			height: 30 * $vp;
+			li{
+				margin: 0 10 * $vp;
+			}
+			&.is-doctor{
+				&:before{
+					content:'';
+					background: #CCC;
+					width: 1px;
+					height: 30 * $vp;
+				}
+			}
+		}
+	}
+	.nav-btn{
+		height: 50 * $vp;
+		li{
+			margin: 0 5 * $vp;
+		}
+		a{
+			width: 140 * $vp;
+			height: 50 * $vp;
+			background: $blue-grade;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: #FFF;
+			border-radius:30 * $vp;
+			&:hover{
+				background: $color-blue;
+			}
+		}
+	}
+	.nav-sub{
+		margin-left: 10 * $vp;
+		li{}
+		a{
+			width: 35 * $vp;
+			height: 35 * $vp;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius:50%;
+			&:hover{
+				background: #e5eff8;
+			}
+		}
+	}
+}
+.navToggle {
+	display: none;
+	margin: auto;
+	width: 30px;
+	height: 22px;
+	position: relative;
+	box-sizing: border-box;
+	cursor: pointer;
+	z-index: 100000;
+	text-align: center;
+	margin-left: 35 * $vp;
+	@include mediaquery-lg {
+		display: block;
+	}
+	span{
+		display: block;
+		position: absolute;
+		margin: auto;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: 30px;
+		height: 2px;
+		background: $blue-grade;
+		border-radius:1px;
+		transition: .35s ease-in-out;
+		&:nth-child(1){
+			top: 0;
+		}
+		&:nth-child(2){
+			top: 0;
+			bottom: 0;
+		}
+		&:nth-child(3){
+			top: auto;
+			bottom: 0;
+		}
+	}
+	&.active{
+		span{
+			&:nth-child(1){
+				top: 0;
+				bottom: 0;
+				transform: rotate(-45deg);
+			}
+			&:nth-child(2){
+				top: 0;
+				bottom: 0;
+				transform: rotate(45deg);
+			}
+			&:nth-child(3){
+				top: 0;
+				bottom: 0;
+				transform: rotate(45deg);
+			}
+		}
+	}
+}

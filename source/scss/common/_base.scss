@@ -35,10 +35,8 @@ html{
 body {
 	color: $color-black;
 	position: relative;
-	letter-spacing: .5 * $vp;
 	font-weight: 400;
 	font-style: normal;
-	background: $color-lightgray;
 	@include mediaquery-md {
 		width: 100%;
 		min-width: initial;
@@ -67,12 +65,13 @@ table td {
 	border: none
 }
 a {
-	color: #000;
+	color: #333;
 	text-decoration: none;
-	transition: .3s
-}
-a:hover {
-	text-decoration: underline
+	transition: .3s;
+	&:hover{
+		text-decoration: none;
+		color: $color-blue;
+	}
 }
 img {
 	max-width: 100%;
@@ -89,14 +88,95 @@ strong{
 p{
 	line-height: 1.8;
 }
-.pc_br{
+.only-pc{
 	@include mediaquery-md {
 		display: none;
 	}
 }
-.sp_br{
+.only-sp{
 	display: none;
 	@include mediaquery-md {
 		display: block;
 	}
 }
+.container{
+	width: 1140 * $vp;
+	padding: 0 20 * $vp;
+	margin: 0 auto;
+	@include mediaquery-md {
+		width: 100%;
+	}
+}
+.xl-container{
+	width: 94%;
+	margin: 0 auto;
+	@include mediaquery-md {
+		width: 100%;
+	}
+}
+.s-container{
+	width: 760 * $vp;
+	padding: 0 20 * $vp;
+	margin: 0 auto;
+	@include mediaquery-md {
+		width: 100%;
+	}
+}
+.slick-arrow{
+	position: relative;
+	width: 15 * $vp !important;
+	height: 30 * $vp !important;
+	top: auto !important;
+	bottom: -64 * $vp;
+	z-index:10;
+	&:before{
+		content:'';
+		font-size: 0 !important;
+		background: url('../img/btn-arrow.svg') no-repeat;
+		width: 15 * $vp !important;
+		height: 30 * $vp !important;
+		background-size: cover;
+		display: block;
+		
+	}
+	&.slick-prev{
+		right: 0 !important;
+		left: -100 * $vp;
+		margin: auto !important;
+		&:before{
+			transform:scale(-1,1);
+			
+		}
+	}
+	&.slick-next{
+		left: 0;
+		right: -100 * $vp;
+		margin: auto !important;
+		&:before{
+		}
+	}
+}
+.slick-dots{
+	bottom: -40 * $vp !important;
+	li{
+		width: 8 * $vp !important;
+		height: 8 * $vp !important;
+		button{
+			width: 8 * $vp !important;
+			height: 8 * $vp !important;
+			padding: 0 !important;
+			border-radius:50% !important;
+			background: #b2cfea !important;
+		}
+		&.slick-active{
+			width: 12 * $vp !important;
+			height: 12 * $vp !important;
+			button{
+				width: 12 * $vp !important;
+				height: 12 * $vp !important;
+				background: #005eb8 !important;
+			}
+		}
+	}
+}
+.slick-dotted.slick-slider{}

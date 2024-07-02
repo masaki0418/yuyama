@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 13 9">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #016fb4;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-2 {
+        filter: url(#outer-glow-1);
+      }
+
+      .cls-3 {
+        filter: url(#outer-glow-2);
+      }
+    </style>
+    <filter id="outer-glow-1" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="0"/>
+      <feGaussianBlur result="blur" stdDeviation="5"/>
+      <feFlood flood-color="#000" flood-opacity=".1"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="outer-glow-2" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="0"/>
+      <feGaussianBlur result="blur-2" stdDeviation="10"/>
+      <feFlood flood-color="#000" flood-opacity=".1"/>
+      <feComposite in2="blur-2" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="contents">
+    <g class="cls-2">
+      <g>
+        <g class="cls-3">
+          <polyline class="cls-1" points="8.75 .5 12.5 4.5 8.75 8.5"/>
+        </g>
+        <line class="cls-1" x1="12.5" y1="4.5" x2=".5" y2="4.5"/>
+      </g>
+    </g>
+  </g>
+</svg>

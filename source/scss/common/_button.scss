@@ -1,2 +1,69 @@
-.c-button {
+.btn-center{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 40 * $vp;
+	a, button{
+		margin: 0 10 * $vp;
+	}
+}
+.btn-left{
+	display: flex;
+	align-items: center;
+	margin-top: 40 * $vp;
+	a, button{
+		margin-right: 10 * $vp;
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+}
+.btn-main{
+	position: relative;
+	background: $blue-grade;
+	height: 60 * $vp;
+	padding: 0 20 * $vp;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: #fff;
+	font-weight: 700;
+	width: 300 * $vp;
+	border-radius:30 * $vp;
+	&:hover{
+		color: #fff;
+		text-decoration: none;
+		background: $color-blue;
+	}
+	&.is-arrow{
+		&:before{
+			content:'';
+			background: url('../img/arrow-white.svg') no-repeat;
+			width: 12 * $vp;
+			height: 8 * $vp;
+			display: block;
+			background-size: 100%;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			right: 20 * $vp;
+			transition: .3s;
+		}
+	}
+
+}
+.btn-white{
+	position: relative;
+	background: #FFF;
+	color: $color-blue;
+	height: 60 * $vp;
+	padding: 0 20 * $vp;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 700;
+	border-radius:30 * $vp;
+	min-width: 227 * $vp;
 }

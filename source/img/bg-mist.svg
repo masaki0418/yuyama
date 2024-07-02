@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 543 543">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#_名称未設定グラデーション_234);
+        filter: url(#outer-glow-1);
+        stroke-width: 0px;
+      }
+    </style>
+    <radialGradient id="_名称未設定グラデーション_234" data-name="名称未設定グラデーション 234" cx="271.5" cy="271.5" fx="271.5" fy="271.5" r="271.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#005eb8" stop-opacity=".15"/>
+      <stop offset="1" stop-color="#29a3da" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="outer-glow-1" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="0"/>
+      <feGaussianBlur result="blur" stdDeviation="5"/>
+      <feFlood flood-color="#000" flood-opacity=".1"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="bg">
+    <circle class="cls-1" cx="271.5" cy="271.5" r="271.5"/>
+  </g>
+</svg>
