@@ -25,9 +25,18 @@ $('a[href^="#"]').click(function(){
 		infinite: true,
 		speed: 1000,
 		fade: true,
-		cssEase: 'linear'
+		cssEase: 'linear',
 		arrows: true,
 	});
+  $(".product-slider").slick({
+    arrows: true,
+    speed: 1000,
+    autoplay: true,
+    adaptiveHeight: true,
+    centerMode: true,
+    centerPadding: "25%",
+    dots: true,
+  });
 });
 //要素を取得
 const tabs = document.querySelectorAll('.js-tab');

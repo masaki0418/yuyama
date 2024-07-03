@@ -195,6 +195,63 @@
 		background: #F2F4F5;
 		border-radius:60 * $vp 60 * $vp 0 0;
 		padding: 135 * $vp 0 120 * $vp 0;
+		.product-slider{
+			margin-bottom: 120 * $vp;
+			position: relative;
+			.product-box{
+				width: calc(50% - #{20 * $vp});
+				height: auto;
+				aspect-ratio:2.4 / 1;
+				border-radius:10 * $vp;
+				background: #fff;
+				box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.1);
+				padding: 20 * $vp;
+				display: flex;
+				align-items: center;
+				margin: 0 10 * $vp;
+				opacity: 0.5;
+				.box-image{
+					width: 35%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					padding: 10 * $vp;
+					flex-shrink: 0;
+					img{
+						width: auto;
+						height: 100%;
+					}
+				}
+				.box-text{
+					flex-grow: 1;
+					padding: 0 5%;
+					label{
+						display: flex;
+						align-items: center;
+						font-size: 13 * $vp;
+						margin-bottom: 10 * $vp;
+						span{
+							display: inline-flex;
+							border:1px solid #000;
+							border-radius:4 * $vp;
+							padding: 5 * $vp 8 * $vp;
+							margin-right: 15 * $vp;
+						}
+					}
+					h3{
+						font-size: 28 * $vp;
+						line-height: 1.4;
+						margin-bottom: 20 * $vp;
+					}
+					.btn-main{
+						width: 227 * $vp;
+					}
+				}
+			}
+			.slick-current{
+				opacity: 1;
+			}
+		}
 		.product__list{
 			display: flex;
 			flex-wrap: wrap;
@@ -206,6 +263,7 @@
 				height: 100 * $vp;
 				display: flex;
 				margin: 10 * $vp;
+				box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.1);
 				.box-image{
 					background: #C2C9D3;
 					width: 50%;
