@@ -37,6 +37,13 @@ $('a[href^="#"]').click(function(){
     centerPadding: "25%",
     dots: true,
   });
+  $(".productheader__slider").slick({
+    arrows: true,
+    speed: 1000,
+    autoplay: true,
+    adaptiveHeight: true,
+    dots: true,
+  });
 });
 //要素を取得
 const tabs = document.querySelectorAll('.js-tab');

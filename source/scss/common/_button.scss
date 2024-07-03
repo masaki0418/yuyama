@@ -52,7 +52,18 @@
 			transition: .3s;
 		}
 	}
-
+	&.is-icon{
+		i{
+			position: absolute;
+			display: block;
+			top: 0;
+			bottom: 0;
+			right: 20 * $vp;
+			margin: auto;
+			max-width: 20 * $vp;
+			max-height:20 * $vp;
+		}
+	}
 }
 .btn-white{
 	position: relative;
@@ -66,4 +77,17 @@
 	font-weight: 700;
 	border-radius:30 * $vp;
 	min-width: 227 * $vp;
+	border:1px solid $color-blue;
+	&.is-icon{
+		i{
+			position: absolute;
+			display: block;
+			top: 0;
+			bottom: 0;
+			right: 20 * $vp;
+			margin: auto;
+			max-width: 15 * $vp;
+			max-height:20 * $vp;
+		}
+	}
 }
