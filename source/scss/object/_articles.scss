@@ -59,6 +59,21 @@
 		}
 	}
 }
+.subPageHeader{
+	width: 94%;
+	height: 205 * $vp;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	margin: 0 auto 80 * $vp auto;
+	border-radius:20 * $vp;
+	background: rgba(242,244,246,1);
+	h1{
+		font-size: 44 * $vp;
+		line-height: 1.2;
+	}
+}
 .bread{
 	width: 94%;
 	margin: 0 auto;
@@ -225,6 +240,7 @@
 						font-weight: 500;
 						position: relative;
 						width: calc(100% - #{240 * $vp});
+						line-height: 1.4;
 						a{
 							display: block;
 							&:before{
@@ -1037,9 +1053,420 @@
 		}
 	}
 }
+.news{
+	margin-bottom: 150 * $vp;
+	.newsList{
+		.news__tab{
+			display: flex;
+			margin-bottom: 40 * $vp;
+			li{
+				width: calc(100% / 3);
+				height: 60 * $vp;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-weight: 700;
+				background: #EEE;
+				border-right: 1px solid #fff;
+				border-bottom: 1px solid $color-blue;
+				&.is-active{
+					border-top: 1px solid $color-blue;
+					border-left: 1px solid $color-blue;
+					border-right: 1px solid $color-blue;
+					border-bottom: 1px solid #fff;
+					border-radius:10 * $vp 10 * $vp 0 0;
+					background: #FFF;
+					color: $color-blue;
+				}
+			}
+		}
+		.archive_tab{
+			display: flex;
+			align-items: center;
+			margin-bottom: 20 * $vp;
+			li{
+				height: 30 * $vp;
+				padding: 0 30 * $vp;
+				border-left:1px solid #cbcbcb;
+				border-bottom: 0;
+				display: flex;
+				align-items: center;
+				font-size: 18 * $vp;
+				position: relative;
+				&:last-child{
+					border-right:1px solid #cbcbcb;
+				}
+				&.is-active{
+					background: $color-blue;
+					color: #fff;
+					box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.1);
+					&:after{
+						content:'';
+						width: 0;
+						height: 0;
+						border-style: solid;
+						border-right: 5px solid transparent;
+						border-left: 5px solid transparent;
+						border-top: 5px solid $color-blue;
+						border-bottom: 0;
+						position: absolute;
+						left: 0;
+						right: 0;
+						bottom: -6 * $vp;
+						margin: auto;
+					}
+				}
+			}
+		}
+		.news__list{
+			width: calc(100% - #{120 * $vp});
+			margin: 0 auto;
+			display: none;
+			&.is-active{
+				display: block;
+			}
+			.tab__inner{
+				li{
+					display: flex;
+					padding: 20 * $vp 0;
+					border-bottom: 1px solid #C8C8C8;
+					.cat{
+						position: relative;
+						width: 130 * $vp;
+						height: 30 * $vp;
+						border-radius:5 * $vp;
+						font-size: 14 * $vp;
+						color: #FFF;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						text-align: center;
+						background: #000;
+						margin-right: 20 * $vp;
+						span{
+							background: #B9272D;
+							width: 30 * $vp;
+							height: 30 * $vp;
+							border-radius:50%;
+							font-weight: 700;
+							color: #fff;
+							font-size: 10 * $vp;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							position: absolute;
+							top: -15 * $vp;
+							left: -15 * $vp;
+						}
+					}
+					time{
+						width: 90 * $vp;
+						font-weight: 700;
+						color: #666;
+						font-size: 14 * $vp;
+						line-height: 1.4;
+					}
+					h2{
+						font-weight: 500;
+						position: relative;
+						width: calc(100% - #{240 * $vp});
+						line-height: 1.4;
+						a{
+							display: block;
+							&:before{
+								content:'';
+								background: url('../img/arrow-blue.svg') no-repeat;
+								width: 12 * $vp;
+								height: 8 * $vp;
+								display: block;
+								background-size: 100%;
+								position: absolute;
+								top: 0;
+								bottom: 0;
+								margin: auto;
+								right: 20 * $vp;
+								transition: .3s;
+							}
+							&:hover{
+								&:before{
+									right: 10 * $vp;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.newsBody{
+		margin-top: 20 * $vp;
+		h1{
+			font-size: 36 * $vp;
+			font-weight: 500;
+			margin-bottom: 60 * $vp;
+		}
+		.news-meta{
+			display: flex;
+			align-items: center;
+			margin-bottom: 30 * $vp;
+			.cat{
+				display: inline-flex;
+				background: #000;
+				min-width: 130 * $vp;
+				height: 30 * $vp;
+				color: #fff;
+				padding: 0 15 * $vp;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 14 * $vp;
+				border-radius:5 * $vp;
+				margin-right: 20 * $vp;
+			}
+			time{
+				font-weight: 700;
+				color: #666;
+				font-size: 14 * $vp;
+			}
+		}
+		.news-text{
+			color: #666;
+			margin-bottom: 80 * $vp;
+			font-size: 14 * $vp;
+			h2{
+				font-size: 24 * $vp;
+				margin-bottom: 25 * $vp;
+				padding-bottom: 25 * $vp;
+				border-bottom: 1px solid #ccc;
+				color: #333;
+			}
+			p, ul, ol, dl, table, blockquote{
+				line-height: 2;
+				margin-bottom: 30 * $vp;
+			}
+			ul, ol{
+				margin: 1.5em;
+				li{
+					line-height: 1.6;
+					margin-bottom: 7.5 * $vp;
+				}
+			}
+			ul{
+				list-style-type: disc;
+			}
+			ol{
+				list-style-type: decimal;
+			}
+			blockquote{
+				background: #d9e3ed;
+				padding: 20 * $vp;
+				border-radius:20 * $vp;
+				p{
+					&:last-child{
+						margin-bottom: 0;
+					}
+				}
+			}
+			table{
+				border:1px solid #666;
+				width: 100%;
+				th, td{
+					text-align: left;
+					padding: 10 * $vp;
+					border:1px solid #666;
+				}
+				th{
+					font-weight: 600;
+				}
+			}
+		}
+	}
+}
+.subPage{
+	margin-bottom: 150 * $vp;
+	.subPageBody{
+		margin-top: 20 * $vp;
+	}
+	h1{
+		font-size: 36 * $vp;
+		font-weight: 500;
+		margin-bottom: 60 * $vp;
+	}
+	.description{
+		font-size: 18 * $vp;
+		margin-bottom: 60 * $vp !important;
+		font-weight: 500;
+		color:#333333;
+	}
+	.page-text{
+		color: #666;
+		margin-bottom: 80 * $vp;
+		font-size: 14 * $vp;
+		h2{
+			font-size: 24 * $vp;
+			margin-bottom: 25 * $vp;
+			padding-bottom: 25 * $vp;
+			border-bottom: 1px solid #ccc;
+			color: #333;
+		}
+		h3{
+			font-size: 16 * $vp;
+			font-weight: 600;
+			margin-bottom: 15 * $vp;
+		}
+		p, ul, ol, dl, table, blockquote{
 
-
-
+			line-height: 2;
+			margin-bottom: 30 * $vp;
+		}
+		ul, ol{
+			margin: 1.5em;
+			li{
+				line-height: 1.6;
+				margin-bottom: 7.5 * $vp;
+			}
+		}
+		ul{
+			list-style-type: disc;
+		}
+		ol{
+			list-style-type: decimal;
+		}
+		blockquote{
+			background: #d9e3ed;
+			padding: 20 * $vp;
+			border-radius:20 * $vp;
+			p{
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+		}
+		table{
+			border:1px solid #666;
+			width: 100%;
+			th, td{
+				text-align: left;
+				padding: 10 * $vp;
+				border:1px solid #666;
+			}
+			th{
+				font-weight: 600;
+			}
+		}
+	}
+}
+.agreement{
+	.addressBox{
+		background: #f2f4f5;
+		width: auto;
+		display: inline-flex;
+		flex-direction: column;
+		margin-bottom: 45 * $vp;
+		padding: 20 * $vp;
+		h4{
+			font-size: 18 * $vp;
+			font-weight: 600;
+			margin-bottom: 10 * $vp;
+		}
+		dl{
+			display: flex;
+			align-items: center;
+			font-weight: 500;
+			margin: 7.5 * $vp 0;
+			dt{
+				width: 45 * $vp;
+				height: 27 * $vp;
+				border:1px solid #000;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+				font-size: 13 * $vp;
+				border-radius:4 * $vp;
+			}
+			dd{
+				width: calc(100% - #{45 * $vp});
+				padding-left: 15 * $vp;
+				font-size: 12 * $vp;
+				line-height: 1.4;
+			}
+		}
+		.address-1line{
+			display: flex;
+			dd{
+				flex-grow: 1;
+			}
+		}
+		.address-2line{
+			display: flex;
+			flex-wrap: wrap;
+			dd{
+				width: 115 * $vp;
+			}
+		}
+	}
+	.is-parent{
+		counter-reset: number 0;
+		list-style-type: none !important;
+		margin-left: 0;
+		> li{
+			position: relative;
+			padding-left: 1.5em;
+			&:before{
+				counter-increment: number 1;
+				content: counter(number)". ";
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			> p{
+				margin-bottom: 0;
+				line-height: 1.6;
+				 + h4{
+				 	margin-top: 20 * $vp;
+				 	+ p{
+				 		margin-left: 1em;
+				 	}
+				 }
+			}
+			h5{
+				+ p{
+					margin-left: 1em;
+				}
+			}
+			.is-nest{
+				counter-reset: number 0;
+				list-style-type: none !important;
+				li{
+					position: relative;
+					padding-left: 1.5em;
+					margin-bottom: 10 * $vp;
+					&:before{
+						counter-increment: number 1;
+						content: "（"counter(number)"）";
+						position: absolute;
+						top: 0;
+						left: -1em;
+					}
+				}
+			}
+		}
+	}
+}
+.policy{
+	.subPageBody{
+		.page-text{
+			h2{
+				font-size: 16 * $vp;
+				font-weight: 600;
+				border-bottom: 0;
+				padding-bottom: 0;
+				margin-bottom: 15px;
+			}
+		}
+	}
+}
 
 
 

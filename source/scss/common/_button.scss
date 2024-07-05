@@ -90,4 +90,16 @@
 			max-height:20 * $vp;
 		}
 	}
+	&.is-icon-r{
+		i{
+			position: absolute;
+			display: block;
+			top: 0;
+			bottom: 0;
+			left: 20 * $vp;
+			margin: auto;
+			max-width: 15 * $vp;
+			max-height:20 * $vp;
+		}
+	}
 }
