@@ -44,6 +44,10 @@ $('a[href^="#"]').click(function(){
     adaptiveHeight: true,
     dots: true,
   });
+  $(".list-panel dt").on("click", function() {
+    $(this).next().slideToggle();
+    $(this).toggleClass("active");//追加部分
+  });
 });
 //要素を取得
 const tabs = document.querySelectorAll('.js-tab');

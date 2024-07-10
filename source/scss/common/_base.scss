@@ -37,6 +37,8 @@ body {
 	position: relative;
 	font-weight: 400;
 	font-style: normal;
+	font-feature-settings: "palt";
+	letter-spacing:.5 * $vp;
 	@include mediaquery-md {
 		width: 100%;
 		min-width: initial;
@@ -123,6 +125,21 @@ p{
 		width: 100%;
 	}
 }
+.l-container{
+	width: 1260 * $vp;
+	margin: 0 auto;
+	@include mediaquery-md {
+		width: 100%;
+	}
+}
+.mm-container{
+	width: 980 * $vp;
+	padding: 0 20 * $vp;
+	margin: 0 auto;
+	@include mediaquery-md {
+		width: 100%;
+	}
+}
 .m-container{
 	width: 1020 * $vp;
 	padding: 0 20 * $vp;
@@ -133,6 +150,14 @@ p{
 }
 .s-container{
 	width: 760 * $vp;
+	padding: 0 20 * $vp;
+	margin: 0 auto;
+	@include mediaquery-md {
+		width: 100%;
+	}
+}
+.xs-container{
+	width: 740 * $vp;
 	padding: 0 20 * $vp;
 	margin: 0 auto;
 	@include mediaquery-md {
@@ -189,6 +214,69 @@ p{
 				transform:scale(-1,1);
 			}
 		}
+	}
+}
+.contents__nav{
+	font-size: 18 * $vp;
+	margin-bottom: 125 * $vp;
+	ul{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		li{
+			border-left: 1px solid #cbcbcb;
+			&:last-child{
+				border-right: 1px solid #cbcbcb;
+			}
+			a{
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				height: 30 * $vp;
+				padding: 0 15 * $vp 0 30 * $vp;
+				&:after{
+					content:'';
+					background: url('../img/btn-arrow-min.svg') no-repeat;
+					width: 10 * $vp;
+					height: 5 * $vp;
+					display: block;
+					margin-left: 15 * $vp;
+				}
+			}
+		}
+	}
+}
+.cards-3col{
+	display: flex;
+	flex-wrap: wrap;
+	margin: -10 * $vp;
+	li{
+		width: calc(100% / 3 - #{20 * $vp});
+		padding: 20 * $vp;
+		border-radius:10 * $vp;
+		display: flex;
+		flex-direction: column;
+		background: #fff;
+		box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.1);
+		margin: 10 * $vp;
+	}
+}
+.list-3col{
+	display: flex;
+	flex-wrap: wrap;
+	margin: -10 * $vp;
+	li{
+		width: calc(100% / 3 - #{20 * $vp});
+		margin: 10 * $vp;
+	}
+}
+.list-5col{
+	display: flex;
+	flex-wrap: wrap;
+	margin: -10 * $vp;
+	li{
+		width: calc(100% / 5 - #{20 * $vp});
+		margin: 10 * $vp;
 	}
 }
 .slick-arrow{

@@ -102,4 +102,37 @@
 			max-height:20 * $vp;
 		}
 	}
+	&.is-arrow{
+		&:before{
+			content:'';
+			background: url('../img/arrow-blue.svg') no-repeat;
+			width: 12 * $vp;
+			height: 8 * $vp;
+			display: block;
+			background-size: 100%;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			right: 20 * $vp;
+			transition: .3s;
+		}
+	}
+	&.is-arrow-front{
+		&:before{
+			content:'';
+			background: url('../img/arrow-blue.svg') no-repeat;
+			width: 15 * $vp;
+			height: 10 * $vp;
+			display: block;
+			background-size: 100%;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			left: 20 * $vp;
+			transition: .3s;
+			transform:scale(-1,1);
+		}
+	}
 }
