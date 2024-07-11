@@ -7,6 +7,16 @@
 		margin: 0 10 * $vp;
 	}
 }
+.btn-long{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 40 * $vp;
+	a, button{
+		margin: 0 10 * $vp;
+		width: 427 * $vp;
+	}
+}
 .btn-left{
 	display: flex;
 	align-items: center;
@@ -133,6 +143,60 @@
 			left: 20 * $vp;
 			transition: .3s;
 			transform:scale(-1,1);
+		}
+	}
+}
+.btn-red{
+	position: relative;
+	background: $color-red;
+	height: 80 * $vp;
+	padding: 0 20 * $vp;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	flex-direction: column;
+	color: #fff;
+	font-weight: 700;
+	width: 300 * $vp;
+	border-radius:40 * $vp;
+	font-size: 24 * $vp;
+	cursor:pointer;
+	transition:.3s;
+	small{
+		display: block;
+		font-size: 14 * $vp;
+	}
+	&:hover{
+		text-decoration: none;
+		opacity: 0.7;
+	}
+	&.is-arrow{
+		&:before{
+			content:'';
+			background: url('../img/arrow-white.svg') no-repeat;
+			width: 12 * $vp;
+			height: 8 * $vp;
+			display: block;
+			background-size: 100%;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			right: 20 * $vp;
+			transition: .3s;
+		}
+	}
+	&.is-icon{
+		i{
+			position: absolute;
+			display: block;
+			top: 0;
+			bottom: 0;
+			right: 20 * $vp;
+			margin: auto;
+			max-width: 20 * $vp;
+			max-height:20 * $vp;
 		}
 	}
 }
